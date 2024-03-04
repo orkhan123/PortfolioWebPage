@@ -1,0 +1,184 @@
+  body {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    /* Sets the font size to 16px */
+    line-height: 1.6;
+    /* Sets the line-height to 1.6 */
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .navigation-list__item--active {
+    text-decoration: none;
+  }
+
+  a {
+    color: #1100ff;
+  }
+
+  a:visited {
+    /* visited link */
+    color: #ff0000;
+  }
+
+  a:hover {
+    /* No underlining when hovering over a link */
+    color: #000000;
+  }
+  
+  a:active {
+    /* selected link */
+    color: #37ff00;
+  }
+
+  .button_index {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: #000908;
+    color: white;
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 4px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+
+  .page_header {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    
+    }
+
+  .page_header_logo {
+    flex: 0 1 200px;
+
+  }
+
+  .page_header_logo:last-child {
+    flex-grow: 1;
+    text-align: right;
+
+    
+  }
+
+  .navigation-list li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 15px;
+    text-align: right;
+  }
+
+  .index_main {
+    max-width: 700px;
+    margin: 0 auto;
+
+  }
+
+  .index_photo {
+    float: left;
+    width:250px;
+    margin-right: 40px;
+    border-radius: 50%;
+
+  }
+
+
+  .page_footer {
+    clear: both;
+    text-align: center;
+}
+
+  .grid-table-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-content: space-evenly;
+    background-color:rgb(0, 255, 255);
+}
+
+  
+  .button2 {
+    background-color: #ff0000;
+    color: white;
+    transition: background-color 1s, transform 5s;
+  }
+
+  .button2:hover {
+    background-color: #1100ff;
+    color: red;
+
+  }
+  
+
+  .button2:active {
+    transform: scale(0,9);
+    box-shadow: 1 2px 10px green;
+  }
+
+  @keyframes color-change {
+    from {
+      fill: #ffbf00;
+    }
+    to {
+      fill: #000000;
+    }
+  }
+
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+  }
+
+  .sun {
+    animation-duration: 7s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  .cloud-front {
+    animation-duration: 30s;
+    animation-name: cloud-move;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  @media all and (max-width: 500px) {
+    .grid-table-example {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+    .grid-table-ex:last-child {
+      grid-column: auto / auto;
+      grid-row: auto / auto;
+    }
+    h1 {
+      font-size: 22px;
+    }
+  }
